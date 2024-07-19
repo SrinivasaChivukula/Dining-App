@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "650111042622",
+    "project_id": "project-c2f87",
+    "storage_bucket": "project-c2f87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650111042622:android:64b36ed6a65da56e27fd6f",
+        "android_client_info": {
+          "package_name": "com.anonymous.UNT_Dining_App"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYoGHFTNe0pSEp4MdVa7zsJHDHNtIb8_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650111042622:android:ec5f8bc0ba26bde827fd6f",
+        "android_client_info": {
+          "package_name": "com.unt.untdining"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYoGHFTNe0pSEp4MdVa7zsJHDHNtIb8_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650111042622:android:0ae2222438c1688427fd6f",
+        "android_client_info": {
+          "package_name": "unt.dining.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYoGHFTNe0pSEp4MdVa7zsJHDHNtIb8_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

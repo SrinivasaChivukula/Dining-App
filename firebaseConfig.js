@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
-import firebase from "@react-native-firebase/app";
-import firestore from "@react-native-firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,15 +15,16 @@ const firebaseConfig = {
   messagingSenderId: "650111042622",
   appId: "1:650111042622:web:d214f5295e99c09627fd6f",
   measurementId: "G-ZSSGZBCTHF",
-  databaseURL: "" // Add this to satisfy the requirement
+  databaseURL: "" // Add this to satisfy the requirement. I dont think its required if you're not using realtime database
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
+const app = initializeApp(firebaseConfig);
 
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = firebase.firestore();
+const db = getFirestore(app);
 
-export { firebase, db }
+export { db }
 
