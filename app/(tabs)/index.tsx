@@ -1,40 +1,35 @@
 import React from 'react';
 import { StyleSheet, Image, Platform, Text, View, Button, Linking, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { Link } from 'expo-router';
+import {DrawerActions, useNavigation} from '@react-navigation/native';
+import {Link} from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
+import {Collapsible} from '@/components/Collapsible';
+import {ExternalLink} from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { ThemeContext } from '@/store/context';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import {ThemedText} from '@/components/ThemedText';
+import {ThemedView} from '@/components/ThemedView';
+import {ThemeContext} from '@/store/context';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 const Drawer = createDrawerNavigator();
 
 export default function TabTwoScreen() {
-  
-  const navigation = useNavigation();
-  
-  
-  const calculateButtonPress = () => {
-    //navigation.navigate('Calculate'); // Navigating to the 'Calculate' tab
-    navigation.navigate('Calculate');
-  };
-  const planButtonPress = () => {
-    //navigation.navigate('Calculate'); // Navigating to the 'Calculate' tab
-    navigation.navigate('Plan');
-  };
-  
-  return (
-    <View style={styles.container}>
-        
-        
-    
-      
-      
-      
-      {/*<ThemedView style={styles.titleContainer}>
+	const navigation = useNavigation();
+
+	const calculateButtonPress = () => {
+		//navigation.navigate('Calculate'); // Navigating to the 'Calculate' tab
+		navigation.navigate('Calculate');
+	};
+	const planButtonPress = () => {
+		//navigation.navigate('Calculate'); // Navigating to the 'Calculate' tab
+		navigation.navigate('Plan');
+	};
+	const onToggle = () => {
+		navigation.dispatch(DrawerActions.openDrawer());
+	};
+
+	return (
+		<View style={styles.container}>
+			{/*<ThemedView style={styles.titleContainer}>
         <Text>UNT</Text>
       </ThemedView>
       
@@ -54,52 +49,45 @@ export default function TabTwoScreen() {
       <View style={styles.mainContent}>
       */}
 
-        <TouchableOpacity
-        style={styles.settingsIconContainer}
-        onPress={() => {
-          // Handle settings icon press if needed
-        }}
-      >
-        <Image
-          source={require('@/assets/images/settings-icon.png')}
-          style={styles.settingsIcon}
-        />
-      </TouchableOpacity>
+			<TouchableOpacity
+				style={styles.settingsIconContainer}
+				onPress={() => {
+					onToggle();
+				}}
+			>
+				<Image
+					source={require('@/assets/images/settings-icon.png')}
+					style={styles.settingsIcon}
+				/>
+			</TouchableOpacity>
 
-        <Image
-        source={require('@/assets/images/unt-logo.png')}
-        style={styles.headerImage}
-        />
+			<Image
+				source={require('@/assets/images/unt-logo.png')}
+				style={styles.headerImage}
+			/>
 
-        <View style={styles.buttonsContainer}> 
+			<View style={styles.buttonsContainer}>
+				<TouchableOpacity
+					style={styles.calculateButton} //changes the style of the button to the button style at the bottom
+					onPress={calculateButtonPress} //takes you to calculate tab when pressed
+				>
+					<Text style={styles.calculateButtonText}>Calculate</Text>
+				</TouchableOpacity>
 
-        <TouchableOpacity 
-        style={styles.calculateButton} //changes the style of the button to the button style at the bottom
-        onPress={calculateButtonPress} //takes you to calculate tab when pressed
-        > 
+				<TouchableOpacity
+					style={styles.planButton} //changes the style of the button to the button style at the bottom
+					onPress={planButtonPress} //takes you to calculate tab when pressed
+				>
+					<Text style={styles.planButtonText}>Plan</Text>
+				</TouchableOpacity>
+			</View>
 
-          <Text style={styles.calculateButtonText}>Calculate</Text>
-
-        </TouchableOpacity>
-
-        <TouchableOpacity 
-        style={styles.planButton} //changes the style of the button to the button style at the bottom
-        onPress={planButtonPress} //takes you to calculate tab when pressed
-        > 
-
-          <Text style={styles.planButtonText}>Plan</Text>
-
-        </TouchableOpacity>
-
-        
-      </View>
-
-      <Image
-        source={require('@/assets/images/unt-dining-logo.png')}
-        style={styles.footerImage}
-    />
-    </View>
-  );
+			<Image
+				source={require('@/assets/images/unt-dining-logo.png')}
+				style={styles.footerImage}
+			/>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
