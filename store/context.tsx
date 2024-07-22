@@ -3,15 +3,14 @@ import {createContext, useState} from 'react';
 import {theme, darkTheme} from '../components/themes';
 
 interface Modal {
-  children?: ReactNode;
-  darkMode: Boolean;
-  // children: Element;
-  theme: {
-    colors: string;
-    spacing: number;
-    textVariants: any;
-  };
-
+	children?: ReactNode;
+	darkMode: Boolean;
+	// children: Element;
+	theme: {
+		colors: string;
+		spacing: number;
+		textVariants: any;
+	};
 }
 
 
