@@ -16,6 +16,7 @@ export const theme = {
 	colors: {
 		background: palette.white,
 		foreground: palette.black,
+		tabIcon: palette.blue,
 		imagePicker: palette.lightGrey,
 		sectionIcons: palette.grey,
 		logo: palette.lightGreen,
@@ -49,6 +50,7 @@ export const darkTheme = {
 		...theme.colors,
 		background: palette.black,
 		foreground: palette.white,
+		tabIcon: palette.white,
 		imagePicker: palette.lightdark,
 	},
 };
