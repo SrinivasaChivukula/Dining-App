@@ -2,6 +2,7 @@ const palette = {
 	white: '#FFFFFF',
 	blue: '#41D7F5',
 	lightGreen: '#E5FD8A',
+	darkGreen: '#002714',
 	yellow: '#fff34d',
 	green: 'green',
 	purple: '#5A31F4',
@@ -47,7 +48,7 @@ export const darkTheme = {
 	...theme,
 	colors: {
 		...theme.colors,
-		background: palette.black,
+		background: palette.darkGreen,
 		foreground: palette.white,
 		imagePicker: palette.lightdark,
 	},
