@@ -1,5 +1,5 @@
 const palette = {
-	white: '#FFFFFF',
+	white: '#cef5e2',
 	blue: '#41D7F5',
 	lightGreen: '#E5FD8A',
 	darkGreen: '#002714',
@@ -11,6 +11,7 @@ const palette = {
 	grey: '#A7A7A7',
 	lightGrey: '#EFEFEF',
 	lightdark: '#2A2A2A',
+	realWhite: '#FFFFFF',
 };
 
 export const theme = {
@@ -24,6 +25,7 @@ export const theme = {
 		success: palette.green,
 		danger: palette.red,
 		failure: palette.red,
+		tabBackground: palette.realWhite,
 	},
 	spacing: {
 		s: 8,
@@ -51,5 +53,6 @@ export const darkTheme = {
 		background: palette.darkGreen,
 		foreground: palette.white,
 		imagePicker: palette.lightdark,
+		tabBackground: palette.black,
 	},
 };

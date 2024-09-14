@@ -17,7 +17,7 @@ export default function TabLayout() {
 					tabBarActiveTintColor: mainTheme.colors.tabIcon,
 					headerShown: false,
 					tabBarStyle: {
-						backgroundColor: mainTheme.colors.background, // Change this to your desired background color
+						backgroundColor: mainTheme.colors.tabBackground, // Change this to your desired background color
 					},
 				}}
 			>

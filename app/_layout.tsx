@@ -40,8 +40,8 @@ export default function RootLayout() {
 		>
 			<GestureHandlerRootView style={{flex: 1}}>
 				<Drawer drawerContent={CustomDrawerContent}>
-					<Drawer.Screen name="(tabs)" options={{headerShown: false}} />
-					<Drawer.Screen name="+not-found" />
+					<Drawer.Screen name="(tabs)" options={{headerShown: false,drawerLabel: 'Home'}} />
+					<Drawer.Screen name="+not-found" options={{headerShown: false,drawerLabel: ''}} />
 				</Drawer>
 			</GestureHandlerRootView>
 		</ThemeContextProvider>
