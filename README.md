@@ -1,8 +1,7 @@
-# UNT Dining - Gen Z Nutrition & Meal Planner
+# UNT Dining - Nutrition & Meal Planner
 
 > **A high-performance, aesthetically pleasing mobile experience for the modern student.**
 
-![Gen Z Aesthetic](https://via.placeholder.com/800x400?text=Modern+UI+Preview)
 
 ## 🚀 Overview
 
@@ -10,15 +9,6 @@ This project is a sophisticated React Native application designed to scrape, agg
 
 Built with **TypeScript** and **Expo**, this app showcases full-stack capability using **Firebase** as a serverless backend, directly relevant to modern startup stacks.
 
-## 🎯 Relevance to "Gen Z Digital Camera Startup" Role
-
-This project directly demonstrates the skills required for the Full Stack Software Engineer position:
-
-*   **Mobile Excellence**: While the role lists Swift/Kotlin, this project proves deep understanding of **mobile app architecture**, navigation patterns, and the constraints of mobile devices (iOS/Android) using **React Native**.
-*   **Modern Frontend Stack**: Built with **TypeScript**, **React**, and modern state management, perfectly aligning with the "TypeScript, React, CSS, Next.js" requirement.
-*   **Gen Z Aesthetic**: The UI is crafted to be "impressive" and "premium," using custom design tokens, modern typography, and vibrant palettes—exactly what a "growing Gen Z digital camera startup" needs to capture its audience.
-*   **Backend & Data**: Integrated with **Firebase (Firestore)** for real-time data syncing, analogous to **Supabase/AWS** in the job description.
-*   **Code Quality**: Strictly typed with TypeScript, ensuring maintainability and scalability.
 
 ## 🛠 Tech Stack
 
