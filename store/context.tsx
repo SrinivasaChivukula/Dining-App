@@ -1,31 +1,37 @@
-import {ReactNode} from 'react';
-import {createContext, useState} from 'react';
-import {theme, darkTheme} from '../components/themes';
+import { ReactNode } from 'react';
+import { createContext, useState } from 'react';
+import { theme, darkTheme } from '../components/themes';
 
-interface Modal {
-  children?: ReactNode;
-  darkMode: Boolean;
-  // children: Element;
-  theme: {
-    colors: string;
-    spacing: number;
-    textVariants: any;
-  };
+type ThemeType = typeof theme;
 
+interface ThemeContextType {
+  mainTheme: ThemeType;
+  setDarkMode: (mode: boolean) => void;
+  darkMode: boolean;
 }
 
+const defaultContext: ThemeContextType = {
+  mainTheme: theme,
+  setDarkMode: () => { },
+  darkMode: false,
+};
 
-const ThemeContext = createContext({});
+const ThemeContext = createContext<ThemeContextType>(defaultContext);
 
-const ThemeContextProvider = ({children}: Modal) => {
+interface ThemeProviderProps {
+  children: ReactNode;
+  darkMode?: boolean; // Optional prop
+}
+
+const ThemeContextProvider = ({ children }: ThemeProviderProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const mainTheme = darkMode ? darkTheme : theme;
-  console.log('setDarkMode',darkMode)
+  console.log('setDarkMode', darkMode)
   return (
-    <ThemeContext.Provider value={{mainTheme, setDarkMode, darkMode}}>
+    <ThemeContext.Provider value={{ mainTheme, setDarkMode, darkMode }}>
       {children}
     </ThemeContext.Provider>
   );
 };
 
-export {ThemeContext, ThemeContextProvider};
+export { ThemeContext, ThemeContextProvider };

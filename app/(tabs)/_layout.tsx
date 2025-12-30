@@ -1,20 +1,20 @@
 import { Tabs } from 'expo-router';
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { DataProvider } from '../../DataContext';
-import {ThemeContext} from '@/store/context';
+import { ThemeContext } from '@/store/context';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-  const {mainTheme} = useContext(ThemeContext);
-  return (
+	const colorScheme = useColorScheme();
+	const { mainTheme } = useContext(ThemeContext);
+	return (
 		<DataProvider>
 			<Tabs
 				screenOptions={{
-					tabBarActiveTintColor: mainTheme.colors.tabIcon,
+					tabBarActiveTintColor: mainTheme.colors.primary,
 					headerShown: false,
 					tabBarStyle: {
 						backgroundColor: mainTheme.colors.tabBackground, // Change this to your desired background color
@@ -25,7 +25,7 @@ export default function TabLayout() {
 					name="index"
 					options={{
 						title: 'Home',
-						tabBarIcon: ({color, focused}) => (
+						tabBarIcon: ({ color, focused }) => (
 							<TabBarIcon
 								name={focused ? 'home' : 'home-outline'}
 								color={color}
@@ -37,7 +37,7 @@ export default function TabLayout() {
 					name="Plan"
 					options={{
 						title: 'Plan',
-						tabBarIcon: ({color, focused}) => (
+						tabBarIcon: ({ color, focused }) => (
 							<TabBarIcon name={focused ? 'pizza' : 'pizza'} color={color} /> // First 'pizza' is the icon it shows when selected. Second is when unselected.
 						),
 					}}
@@ -46,7 +46,7 @@ export default function TabLayout() {
 					name="Calculate"
 					options={{
 						title: 'Calculate',
-						tabBarIcon: ({color, focused}) => (
+						tabBarIcon: ({ color, focused }) => (
 							<TabBarIcon
 								name={focused ? 'fast-food' : 'fast-food'}
 								color={color}
